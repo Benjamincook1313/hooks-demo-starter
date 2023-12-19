@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useState } from "react";
-// import Counters from './Counters.jsx';
+import Counters from './Counters.jsx';
 import Die from './Die.jsx';
 import Layout from './Layout.jsx';
-// import MissingKey from './MissingKey.jsx';
-// import MovieList from './MovieList.jsx';
+import MissingKey from './MissingKey.jsx';
+import MovieList from './MovieList.jsx';
 import Pokemon from './Pokemon.jsx';
 
 export default function App() {
@@ -18,7 +18,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          {/* <Route
+          <Route
             path="/dice"
             element={
               <div>
@@ -30,10 +30,10 @@ export default function App() {
                 <Die sides="20" />
               </div>
             }
-          /> */}
-          {/* <Route path="/movies" element={<MovieList />} /> */}
-          {/* <Route path="/missing-key" element={<MissingKey />} /> */}
-          {/* <Route path="/counters" element={<Counters />} /> */}
+          />
+          <Route path="/movies" element={<MovieList />} />
+          <Route path="/missing-key" element={<MissingKey />} />
+          <Route path="/counters" element={<Counters />} />
           <Route path="/pokemon" element={<Pokemon num={num} setNum={setNum}/>} /> 
           </Route>
       </Routes>

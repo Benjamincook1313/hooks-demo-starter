@@ -14,7 +14,17 @@ export default function MissingKey() {
   };
 
   // Key is missing! Check out what happens as a result!
-  const emojiList = null;
+  const emojiList = emojis.map((emoji, i) => (
+    <li className='emoji-item' key={emoji.id}>
+      {emoji.emoji}
+      <select>
+        <option >Bad</option>
+        <option >Okay</option>
+        <option >Very Good</option>
+      </select>
+      <button onClick={() => deleteEmoji(emoji.id)}>Delete</button>
+    </li>
+  ));
 
   return (
     <div>
